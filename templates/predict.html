@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Resultado de la Preducción</title>
+</head>
+<body>
+    <div class="container-xl">
+        <div class="row text-center align-items-center">
+            <h2>Resultado de la clasificación</h2>
+        </div>
+    </div>
+    <div class="container-xl">
+        <div class="row align-items-center">
+            <div class="col-6">
+                <div class="card">
+                    <img src="{{url_for ('static', filename = './uploads/'+imagen)}}" alt="" class="img-fluid">
+                    <div class="card-body">
+                        <h3><span class="badge bg-primary">{{ result }}</span></h3>
+                        <p class="card-text">{{ descrip }}</p>
+                        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                        <a href="/" class="btn btn-danger">Ir a inicio</a>
+                      </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <h3>La imagen es un: <span class="badge bg-primary">{{ result }}</span></h3>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-header">
+                              Noticias
+                            </div>
+                            <div class="card-body">
+                              <h5><class class="card-title">Las últimas noticias relacionadas con {{plural}}</class></h5>
+                              <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                              <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver más</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-header">
+                              Artículos
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Los articulos más famosos que hablan de {{plural}}</h5>
+                              <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                              <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver más</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-header">
+                              Tiendas
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Las tiendas más destacadas de {{plural}}</h5>
+                              <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                              <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver más</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-header">
+                              Accesorios
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Las mejores accesorios de {{plural}}</h5>
+                              <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                              <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver más</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Button trigger modal -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h2>PROXIMAMENTE</h2>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>
